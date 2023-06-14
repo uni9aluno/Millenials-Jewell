@@ -1,0 +1,136 @@
+[gd_scene load_steps=67 format=2]
+
+[ext_resource path="res://Fonts/FontResource.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Menus/ChangeSceneButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Fonts/CloisterBlack.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Backgrounds/frame_50_delay-0.1s.png" type="Texture" id=4]
+[ext_resource path="res://Backgrounds/frame_02_delay-0.1s.png" type="Texture" id=5]
+[ext_resource path="res://Backgrounds/frame_30_delay-0.1s.png" type="Texture" id=6]
+[ext_resource path="res://Backgrounds/frame_13_delay-0.1s.png" type="Texture" id=7]
+[ext_resource path="res://Backgrounds/frame_07_delay-0.1s.png" type="Texture" id=8]
+[ext_resource path="res://Backgrounds/frame_01_delay-0.1s.png" type="Texture" id=9]
+[ext_resource path="res://Backgrounds/frame_38_delay-0.1s.png" type="Texture" id=10]
+[ext_resource path="res://Backgrounds/frame_18_delay-0.1s.png" type="Texture" id=11]
+[ext_resource path="res://Backgrounds/frame_17_delay-0.1s.png" type="Texture" id=12]
+[ext_resource path="res://Backgrounds/frame_14_delay-0.1s.png" type="Texture" id=13]
+[ext_resource path="res://Backgrounds/frame_44_delay-0.1s.png" type="Texture" id=14]
+[ext_resource path="res://Backgrounds/frame_42_delay-0.1s.png" type="Texture" id=15]
+[ext_resource path="res://Backgrounds/frame_41_delay-0.1s.png" type="Texture" id=16]
+[ext_resource path="res://Backgrounds/frame_40_delay-0.1s.png" type="Texture" id=17]
+[ext_resource path="res://Backgrounds/frame_43_delay-0.1s.png" type="Texture" id=18]
+[ext_resource path="res://Backgrounds/frame_03_delay-0.1s.png" type="Texture" id=19]
+[ext_resource path="res://Backgrounds/frame_19_delay-0.1s.png" type="Texture" id=20]
+[ext_resource path="res://Backgrounds/frame_10_delay-0.1s.png" type="Texture" id=21]
+[ext_resource path="res://Backgrounds/frame_29_delay-0.1s.png" type="Texture" id=22]
+[ext_resource path="res://Backgrounds/frame_35_delay-0.1s.png" type="Texture" id=23]
+[ext_resource path="res://Backgrounds/frame_04_delay-0.1s.png" type="Texture" id=24]
+[ext_resource path="res://Backgrounds/frame_28_delay-0.1s.png" type="Texture" id=25]
+[ext_resource path="res://Backgrounds/frame_25_delay-0.1s.png" type="Texture" id=26]
+[ext_resource path="res://Backgrounds/frame_51_delay-0.1s.png" type="Texture" id=27]
+[ext_resource path="res://Backgrounds/frame_15_delay-0.1s.png" type="Texture" id=28]
+[ext_resource path="res://Backgrounds/frame_08_delay-0.1s.png" type="Texture" id=29]
+[ext_resource path="res://Backgrounds/frame_22_delay-0.1s.png" type="Texture" id=30]
+[ext_resource path="res://Backgrounds/frame_31_delay-0.1s.png" type="Texture" id=31]
+[ext_resource path="res://Backgrounds/frame_36_delay-0.1s.png" type="Texture" id=32]
+[ext_resource path="res://Backgrounds/frame_47_delay-0.1s.png" type="Texture" id=33]
+[ext_resource path="res://Backgrounds/frame_34_delay-0.1s.png" type="Texture" id=34]
+[ext_resource path="res://Backgrounds/frame_00_delay-0.1s.png" type="Texture" id=35]
+[ext_resource path="res://Backgrounds/frame_24_delay-0.1s.png" type="Texture" id=36]
+[ext_resource path="res://Backgrounds/frame_48_delay-0.1s.png" type="Texture" id=37]
+[ext_resource path="res://Backgrounds/frame_49_delay-0.1s.png" type="Texture" id=38]
+[ext_resource path="res://Backgrounds/frame_46_delay-0.1s.png" type="Texture" id=39]
+[ext_resource path="res://Backgrounds/frame_05_delay-0.1s.png" type="Texture" id=40]
+[ext_resource path="res://Backgrounds/frame_12_delay-0.1s.png" type="Texture" id=41]
+[ext_resource path="res://Backgrounds/frame_59_delay-0.1s.png" type="Texture" id=42]
+[ext_resource path="res://Backgrounds/frame_06_delay-0.1s.png" type="Texture" id=43]
+[ext_resource path="res://Backgrounds/frame_52_delay-0.1s.png" type="Texture" id=44]
+[ext_resource path="res://Backgrounds/frame_37_delay-0.1s.png" type="Texture" id=45]
+[ext_resource path="res://Backgrounds/frame_56_delay-0.1s.png" type="Texture" id=46]
+[ext_resource path="res://Backgrounds/frame_57_delay-0.1s.png" type="Texture" id=47]
+[ext_resource path="res://Backgrounds/frame_39_delay-0.1s.png" type="Texture" id=48]
+[ext_resource path="res://Backgrounds/frame_26_delay-0.1s.png" type="Texture" id=49]
+[ext_resource path="res://Backgrounds/frame_32_delay-0.1s.png" type="Texture" id=50]
+[ext_resource path="res://Backgrounds/frame_20_delay-0.1s.png" type="Texture" id=51]
+[ext_resource path="res://Backgrounds/frame_23_delay-0.1s.png" type="Texture" id=52]
+[ext_resource path="res://Backgrounds/frame_33_delay-0.1s.png" type="Texture" id=53]
+[ext_resource path="res://Backgrounds/frame_54_delay-0.1s.png" type="Texture" id=54]
+[ext_resource path="res://Backgrounds/frame_21_delay-0.1s.png" type="Texture" id=55]
+[ext_resource path="res://Backgrounds/frame_11_delay-0.1s.png" type="Texture" id=56]
+[ext_resource path="res://Backgrounds/frame_53_delay-0.1s.png" type="Texture" id=57]
+[ext_resource path="res://Backgrounds/frame_55_delay-0.1s.png" type="Texture" id=58]
+[ext_resource path="res://Backgrounds/frame_09_delay-0.1s.png" type="Texture" id=59]
+[ext_resource path="res://Backgrounds/frame_45_delay-0.1s.png" type="Texture" id=60]
+[ext_resource path="res://Backgrounds/frame_27_delay-0.1s.png" type="Texture" id=61]
+[ext_resource path="res://Backgrounds/frame_16_delay-0.1s.png" type="Texture" id=62]
+[ext_resource path="res://Backgrounds/frame_58_delay-0.1s.png" type="Texture" id=63]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 3 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 35 ), ExtResource( 9 ), ExtResource( 5 ), ExtResource( 19 ), ExtResource( 24 ), ExtResource( 40 ), ExtResource( 43 ), ExtResource( 8 ), ExtResource( 29 ), ExtResource( 59 ), ExtResource( 21 ), ExtResource( 56 ), ExtResource( 41 ), ExtResource( 7 ), ExtResource( 13 ), ExtResource( 28 ), ExtResource( 62 ), ExtResource( 12 ), ExtResource( 11 ), ExtResource( 20 ), ExtResource( 51 ), ExtResource( 55 ), ExtResource( 30 ), ExtResource( 52 ), ExtResource( 36 ), ExtResource( 26 ), ExtResource( 49 ), ExtResource( 61 ), ExtResource( 25 ), ExtResource( 22 ), ExtResource( 6 ), ExtResource( 31 ), ExtResource( 50 ), ExtResource( 53 ), ExtResource( 34 ), ExtResource( 23 ), ExtResource( 32 ), ExtResource( 45 ), ExtResource( 10 ), ExtResource( 48 ), ExtResource( 17 ), ExtResource( 16 ), ExtResource( 15 ), ExtResource( 18 ), ExtResource( 14 ), ExtResource( 60 ), ExtResource( 39 ), ExtResource( 33 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 4 ), ExtResource( 27 ), ExtResource( 44 ), ExtResource( 57 ), ExtResource( 54 ), ExtResource( 58 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 63 ), ExtResource( 42 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="AboutScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -2.0
+margin_top = -6.0
+margin_right = -2.0
+margin_bottom = -6.0
+
+[node name="Menu" type="VBoxContainer" parent="."]
+margin_left = 10.0
+margin_top = 14.0
+margin_right = 298.0
+margin_bottom = 162.0
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Label" type="Label" parent="Menu"]
+margin_right = 288.0
+margin_bottom = 20.0
+custom_fonts/font = ExtResource( 1 )
+text = "Sobre o jogo"
+align = 1
+
+[node name="BackButton" parent="." instance=ExtResource( 2 )]
+margin_left = 252.0
+margin_top = 166.0
+margin_right = 316.0
+margin_bottom = 182.0
+text = "VOLTAR"
+scene = "res://Menus/TitleScreen.tscn"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 9.0
+margin_top = 41.0
+margin_right = 314.0
+margin_bottom = 163.0
+focus_mode = 2
+custom_fonts/mono_font = SubResource( 1 )
+custom_fonts/normal_font = SubResource( 2 )
+text = "Ha muito tempo atras existia um lugar chamado reino Lunar um reino muito prospero e feliz, onde toda as pessoas eram felizes e próspera. Existia uma joia, na qual estava sobre o comando da grande Rainha Kari uma rainha leal e justa com seu povo. Todos amavam sua rainha e viviam de forma harmoniosa, exceto o maior inimigo do reino o grande malfeitor Sutur que cobiçava e até havia tentado roubar a joia por diversas vezes, porém, sem sucesso, graças a Guarda Real que protegia a Joia Milenar.
+A Joia Milenar é a relíquia em que mantem o reino prospero e feliz no qual o detentor dela terá poder e prosperidade, porém, nas mãos erradas levará um mal imenso a todos, causando trevas, dor, fome e falta de esperança a todos.
+Sutur está planejando roubar a joia, ele viu uma falha na Guarda Real quando eles trocam de postos, a Joia fica livre por alguns segundos. Nesse pequeno intervalo de tempo ele consegue roubar a joia e fugir para a Montanha Misteriosa, um lugar cercado de perigos e mistérios, onde só
+o mais corajoso e leal guerreiro consegue entrar nela. A Guarda Real quando toma conhecimento que a joia foi roubada, vão avisar a Rainha. Prontamente a ele organiza um grande evento para comunicar que seu povo corre grande perigo, pois a joia é o que sustenta o reino. Ela ordena que a Guarda se prontifique de achar e recuperar a relíquia. Os Guardas então partem rumo a Montanha Misteriosa na busca pelo objeto roubado, fortemente equipados e treinados.
+Dado algumas semanas, nenhum dos Guardas dão notícia, levando o reino a entrar em desespero
+total, pois, as consequências seriam muito serias ao povo. Nisso retorna um Guarda muito ferido e assustado, dizendo que a Guarda Real havia sido exterminada. A rainha triste e desesperada com a situação organiza um grande evento, onde quatro grandes guerreiros se mobilizam a participar. O
+evento em si é busca pela joia roubada. O guerreiro que conseguir recuperar a Joia, ganhará uma grande recompensa."
+selection_enabled = true
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+position = Vector2( 163, 97 )
+scale = Vector2( 0.4, 0.404444 )
+z_index = -1
+frames = SubResource( 3 )
+frame = 24
+playing = true

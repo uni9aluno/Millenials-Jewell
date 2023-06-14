@@ -1,0 +1,266 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://Player/StompChecker.gd" type="Script" id=1]
+[ext_resource path="res://Player/StateMachine/States/Air.gd" type="Script" id=2]
+[ext_resource path="res://Player/StateMachine/States/Ground.gd" type="Script" id=3]
+[ext_resource path="res://Player/Player.gd" type="Script" id=4]
+[ext_resource path="res://Player/StateMachine/StateMachine.gd" type="Script" id=5]
+[ext_resource path="res://Player/StateMachine/States/Dash.gd" type="Script" id=6]
+[ext_resource path="res://Aesprite/player.png" type="Texture" id=7]
+[ext_resource path="res://Camera/AnchorDetector2D.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Camera/AnchorCamera2D.gd" type="Script" id=9]
+[ext_resource path="res://Player/AnimatedSprite.gd" type="Script" id=10]
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 7 )
+region = Rect2( 32, 0, 16, 20 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 7 )
+region = Rect2( 32, 0, 16, 20 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 7 )
+region = Rect2( 0, 40, 16, 20 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 7 )
+region = Rect2( 16, 40, 16, 20 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 7 )
+region = Rect2( 16, 40, 16, 20 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 7 )
+region = Rect2( 16, 0, 16, 20 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 7 )
+region = Rect2( 48, 0, 16, 20 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 7 )
+region = Rect2( 0, 20, 16, 20 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 7 )
+region = Rect2( 16, 20, 16, 20 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 7 )
+region = Rect2( 32, 20, 16, 20 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 7 )
+region = Rect2( 48, 20, 16, 20 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ SubResource( 3 ) ],
+"loop": false,
+"name": "Dash",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 4 ) ],
+"loop": false,
+"name": "Fall",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 6 ), SubResource( 5 ), SubResource( 5 ), SubResource( 6 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 5 ), SubResource( 7 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 15.0
+}, {
+"frames": [ SubResource( 8 ) ],
+"loop": false,
+"name": "Jump",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 9 ) ],
+"loop": false,
+"name": "Land",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ],
+"loop": true,
+"name": "Run",
+"speed": 15.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 3.4831, 7 )
+
+[sub_resource type="Animation" id=14]
+resource_name = "Squash"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1.2, 0.8 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimatedSprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.5, -0.4 ), Vector2( 0.5, -2 ) ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "Stretch"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.8, 1.2 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimatedSprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.5, -3.2 ), Vector2( 0.5, -1.6 ) ]
+}
+
+[node name="Player" type="KinematicBody2D" groups=["Player"]]
+z_index = 3
+collision_layer = 2
+collision_mask = 5
+script = ExtResource( 4 )
+run_speed = 6.0
+time_to_run_speed = 0.07
+jump_height = 2.25
+jump_distance = 2.5
+min_jump_height = 1.25
+multi_jump_enabled = false
+multi_jump_height = 2.25
+dash_enabled = false
+dash_distance = 2.0
+time_to_dash_distance = 0.15
+fast_fall_distance = 1.75
+drop_enabled = false
+terminal_velocity_factor = 1.5
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0.5, -2 )
+frames = SubResource( 2 )
+animation = "Idle"
+script = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 0, 1 )
+shape = SubResource( 1 )
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource( 5 )
+initial_state = NodePath("Ground")
+
+[node name="Ground" type="Node" parent="StateMachine"]
+script = ExtResource( 3 )
+
+[node name="Air" type="Node" parent="StateMachine"]
+script = ExtResource( 2 )
+
+[node name="BounceTimer" type="Timer" parent="StateMachine/Air"]
+process_mode = 0
+wait_time = 0.1
+one_shot = true
+
+[node name="Dash" type="Node" parent="StateMachine"]
+script = ExtResource( 6 )
+
+[node name="StompChecker" type="Node2D" parent="."]
+visible = false
+position = Vector2( 0, -2 )
+script = ExtResource( 1 )
+
+[node name="VerticalCasts" type="Node2D" parent="StompChecker"]
+
+[node name="DownCast1" type="RayCast2D" parent="StompChecker/VerticalCasts"]
+position = Vector2( -3, 9 )
+cast_to = Vector2( 0, 10 )
+collision_mask = 8
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="DownCast2" type="RayCast2D" parent="StompChecker/VerticalCasts"]
+position = Vector2( 0, 9 )
+cast_to = Vector2( 0, 10 )
+collision_mask = 8
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="DownCast3" type="RayCast2D" parent="StompChecker/VerticalCasts"]
+position = Vector2( 3, 9 )
+cast_to = Vector2( 0, 10 )
+collision_mask = 8
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="HorizontalCasts" type="Node2D" parent="StompChecker"]
+
+[node name="RightCast" type="RayCast2D" parent="StompChecker/HorizontalCasts"]
+position = Vector2( 3, 8 )
+cast_to = Vector2( 10, 0 )
+collision_mask = 8
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="LeftCast" type="RayCast2D" parent="StompChecker/HorizontalCasts"]
+position = Vector2( -3, 8 )
+cast_to = Vector2( -10, 0 )
+collision_mask = 8
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="CooldownTimer" type="Timer" parent="StompChecker"]
+process_mode = 0
+wait_time = 0.1
+one_shot = true
+
+[node name="AnchorCamera2D" type="Camera2D" parent="."]
+position = Vector2( 0, -2 )
+current = true
+editor_draw_screen = false
+script = ExtResource( 9 )
+max_speed = 1500.0
+mass = 3.75
+
+[node name="AnchorDetector2D" parent="." instance=ExtResource( 8 )]
+visible = false
+position = Vector2( 0, -2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Squash = SubResource( 14 )
+anims/Stretch = SubResource( 15 )
+
+[node name="AutoJumpTimer" type="Timer" parent="."]
+
+[connection signal="anchor_detached" from="AnchorDetector2D" to="AnchorCamera2D" method="_on_AnchorDetector2D_anchor_detached"]
+[connection signal="anchor_detected" from="AnchorDetector2D" to="AnchorCamera2D" method="_on_AnchorDetector2D_anchor_detected"]
